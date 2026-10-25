@@ -1,0 +1,16 @@
+| class | cases | refused | completed | expected | match |
+|---|---|---|---|---|---|
+| CLEAN | 4 | 0 | 4 | COMPLETED/REFUSED | 3/4 |
+| UNSIGNED | 3 | 3 | 0 | REFUSED | 3/3 |
+| TAMPERED | 5 | 5 | 0 | REFUSED | 5/5 |
+| REPLAYED | 3 | 3 | 0 | REFUSED | 3/3 |
+| EXPIRED | 3 | 3 | 0 | REFUSED | 3/3 |
+| TOOL_NOT_ALLOWED | 3 | 3 | 0 | REFUSED | 3/3 |
+| ARG_OUT_OF_SCHEMA | 4 | 4 | 0 | REFUSED | 4/4 |
+| BUDGET_EXCEEDED | 3 | 3 | 0 | REFUSED | 3/3 |
+| TRACE_SPLICED | 7 | 7 | 0 | REFUSED | 7/7 |
+MISMATCH clean-01 got=COMPLETED/OK want=REFUSED/BAD_SIGNATURE
+success: 34/35
+median latency ms: 0.045
+cases-sha256: 7a5fd7367c672dd17143b73aba6a23c4034a6c325dce9b3d9072beddff849b0c
+exit: 1
