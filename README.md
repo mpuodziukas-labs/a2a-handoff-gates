@@ -2,6 +2,8 @@
 
 Proves: two scripted Python agents hand one task from a planner agent to an executor agent across a gated boundary, and every unsafe handoff in a planted corpus is refused while every clean one completes. Verify in 60s: `python3 evaluate.py`
 
+Where this fits: OWASP LLM Top 10 2025 LLM06 Excessive Agency; NIST AI RMF function MANAGE. Sources in SOURCES.md.
+
 ## The problem
 
 When one agent hands a task to another, the receiving agent usually trusts the message. A task that was edited in transit, sent twice, left sitting past its deadline, or never signed looks the same as a good one. Once the executor starts, nothing checks each tool call against what the task allowed, so a widened tool list or an over budget run is only noticed afterward, if at all.
